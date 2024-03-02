@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Video en HTML</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        #video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que el video cubra toda la pantalla sin deformación */
+        }
+
+        #texto-superpuesto {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video autoplay loop muted>
+            <source src="Akatsuki/IMG_6012.MP4" type="video/mp4">
+            <!-- Agrega otros formatos de video compatibles si lo deseas -->
+        </video>
+        <div id="texto-superpuesto">
+            Akatsuki (暁 amanecer)
+        </div>
+    </div>
+</body>
+</html>
